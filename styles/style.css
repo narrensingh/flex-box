@@ -5,20 +5,34 @@
   color: #ffeead;
 }
 
+/* .container {
+    flex-wrap: nowrap | wrap | wrap-reverse;
+  } 
+*/
+
+.container {
+  border: black 5px solid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 html,
 body {
   background-color: #ffeead;
   margin: 10px;
 }
 
-.container > div:nth-child(1) {
+.container > .item1 {
   background-color: #96ceb4;
 }
 
-.container > div:nth-child(2) {
+.container > .item2 {
   background-color: #ff6f69;
 }
 
-.container > div:nth-child(3) {
+.container > .item3 {
   background-color: #88d8b0;
+  border:black 2px solid;
 }
+
