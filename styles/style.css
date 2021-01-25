@@ -1,38 +1,106 @@
-.container > div {
-  padding: 10px;
-  text-align: center;
-  font-size: 2em;
-  color: #ffeead;
-}
+/* FLEX-WRAP */
 
 /* .container {
     flex-wrap: nowrap | wrap | wrap-reverse;
   } 
 */
 
+/* FLEX-FLOW */
+
+/* Definition and Usage
+The flex-flow property is a shorthand property for:
+flex-direction
+flex-wrap
+Note: If the elements are not flexible items, the flex-flow property has no effect. */
+/* div {
+  display: flex;
+  flex-flow: row-reverse wrap;
+} */
+/* row nowrap
+row-reverse nowrap
+column nowrap
+column-reverse nowrap
+row wrap
+row-reverse wrap
+column wrap
+column-reverse wrap
+row wrap-reverse
+row-reverse wrap-reverse
+column wrap-reverse
+column-reverse wrap-reverse
+initial */
+
+/* JUSTIFY-CONTENT */
+
+/* .container {
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+} */
+
+/* ALIGN-ITEMS */
+/* .container {
+  align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+} */
+
+/* ALIGN-CONTENT */
+/* .container {
+  align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;
+} */
+
+/* FLEX-GROW */
+/* .item {
+  flex-grow: 4;  default 0
+}
+*/
+
 .container {
   border: black 5px solid;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  height: 100%;
+  align-items: center;
+  align-content: space-between;
 }
 
 html,
 body {
   background-color: #ffeead;
   margin: 10px;
+  height: 100%;
 }
 
 .container > .item1 {
   background-color: #96ceb4;
+  order: 1;
 }
 
+/* ORDER */
+/* align-self */
 .container > .item2 {
   background-color: #ff6f69;
+  flex-grow: 2;
+  order: 3;
 }
+
+/* .item {
+  flex-shrink: 3; default 1 
+} */
 
 .container > .item3 {
   background-color: #88d8b0;
-  border:black 2px solid;
+  order: 2;
 }
 
+.container > div {
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  color: #ffeead;
+  flex-shrink: 2;
+}
+
+.item4 {
+  background-color: #88d8b0;
+  order: 4;
+  align-self: flex-end;
+}
